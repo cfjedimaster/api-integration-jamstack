@@ -1,0 +1,6 @@
+My scratch pad, nothing important.
+
+Desc:
+Now that you've gone static, how do you get the dynamic awesomeness back in? I'll show you how by using APIs and serverless calls.
+
+Blog post: https://www.raymondcamden.com/2019/07/25/multiple-ways-of-api-integration-in-your-jamstack
