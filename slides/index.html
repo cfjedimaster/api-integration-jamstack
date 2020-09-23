@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>API Integration in your Jamstack</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section
+				data-background="img/landscape.jpg" data-background-opacity="0.4"><h1>API Integration in your Jamstack</h1></section>
+
+				<section>
+					<h2>read.me</h2>
+					<ul>
+						<li>Raymond Camden</li>
+						<li>Lead Developer Evangelist for HERE</li>
+						<li>Second best "Just Dance 2019" player (in my house)</li>
+						<li>Blogging at raymondcamden.com</li>
+						<li>Tweeting @raymondcamden</li>
+						<li>Repo: <a href="https://github.com/cfjedimaster/api-integration-jamstack" target="_new">github.com/cfjedimaster/api-integration-jamstack</a></li>
+					</ul>
+				</section>	
+
+				<section>
+				<h2>Gameplan</h2>
+				<ul>
+				<li class="fragment">Remember JAMStack?</li>
+				<li class="fragment">Remember Static Site Generators?</li>
+				<li class="fragment">The A is for API</li>
+				<li class="fragment">Other services enhance my site</li>
+				</ul>
+				<aside class="notes">
+				What we call jamstack now has evolved over the years from capital J-A-MStack and before that, static sites.
+				</aside>
+				</section>				
+
+				<section>
+				<h2>Gameplan</h2>
+				<ul>
+				<li class="fragment">Using APIs in Client-Side JavaScript</li>
+				<li class="fragment">Using API Proxies</li>
+				<li class="fragment">Using APIs in the Build Process</li>
+				<li class="fragment">Generating an "API"</li>
+				</ul>
+				<aside class="notes">
+				</aside>
+				</section>				
+
+				<section>
+				<h2>APIs on the Client</h2>
+				</section>				
+
+				<section>
+				<h2>APIs on the Client</h2>
+				<ul>
+				<li class="fragment">Just regular HTTP calls from JavaScript</li>
+				<li class="fragment">To be clear - NOT SPECIFIC TO JAMSTACK</li>
+				<li class="fragment">A simple way to add in awesomeness!</li>
+				<li class="fragment">"Just works" (mostly...)</li>
+				</ul>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<aside class="notes">
+Demo is demo1, an Eleventy site. Point out a few things that happened with it, specifically that I needed 
+to tell it to copy the JS file, and that Eleventy uses Liquid in Markdown, which breaks Vue. 
+					</aside>
+				</section>
+
+				<section>
+				<h2>APIs on the Client - Cons</h2>
+				<ul>
+				<li class="fragment">CORS</li>
+				<li class="fragment">Anonymous access</li>
+				<li class="fragment">Can't modify data (kinda)</li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>API Proxies</h2>
+				</section>				
+
+				<section>
+				<h2>API Proxies</h2>
+				<ul>
+				<li class="fragment">Fancy way of saying a midpoint between your code and the API</li>
+				<li class="fragment">Serverless is a great use case</li>
+				<li class="fragment">You can hide keys</li>
+				<li class="fragment">You can shape the result</li>
+				<li class="fragment">You can switch providers</li>
+				<li class="fragment">You can add caching</li>
+				</ul>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<aside class="notes">
+					Demo2 uses a serverless proxy
+					</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				slideNumber:"c/t"
+			});
+		</script>
+	</body>
+</html>

@@ -4,3 +4,45 @@ Desc:
 Now that you've gone static, how do you get the dynamic awesomeness back in? I'll show you how by using APIs and serverless calls.
 
 Blog post: https://www.raymondcamden.com/2019/07/25/multiple-ways-of-api-integration-in-your-jamstack
+
+Option 1 - direct access to APIs, ie client-side JavaScript
+
+CONS:
+First, it assumes the remote API enables CORS, which allows your domain to directly access its domain. Many APIs 
+allow this, but not all.
+
+Secondly, it assumes anonymous access. This is actually not the norm as typically an API requires some kind of identifier. 
+Sometimes this isn't a big deal. The API has a generous free tier and is not likely to be abused. But 
+as soon as you put an API key into your code, anyone who can view source can then take that key and use it themselves. 
+Some APIs will let you lock down what domains can use that key, and in that case, you're pretty safe. But you absolutely 
+want to keep that in mind.
+
+Finally, you are tied to working with data from the API in only the form it provides. That may not sound like a big 
+deal, but what if the API returned a lot of data you don't need? You're putting that burden on the user which means 
+(potentially) a slower web site and a (again, potentially) frustrating experience. This is where GraphQL really shines 
+as it lets you specify exactly what data you need.
+
+Option Two - An API Proxy
+We have the ability to hide any required keys.
+We have the ability to shape the result. This could include removing data we don't need, changing data for our needs, 
+or heck, we could even add data too if it would be useful to the client.
+We could even switch providers. If I need to use someone besides HERE for my data, I can change it at the server 
+and the front-end code won't have to know. I'd just ensure the result data matches what I used before.
+You could also add caching. Some API providers ask that you don't do this, but you could store data locally and 
+only fetch when you need to.
+The only real "drawback" I can see is that it's definitely a bit more work. To me this was rather easy, but I've 
+got experience writing code on the server and working with serverless platforms. I don't want to minimize the fact 
+that not having these skills would be a bit of a jump if your only JavaScript experience is in client-side code.
+
+Option Three - Using the Build Process
+
+
+Option Four - generating an API
+
+Extra Credit - mixing it up (blog post on Fauna)
+
+Things to add at end - blog post (Read the book!)
+
+Photo Credits:
+
+<span>Photo by <a href="https://unsplash.com/@8moments?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Simon Berger</a> on <a href="https://unsplash.com/s/photos/landscape?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
