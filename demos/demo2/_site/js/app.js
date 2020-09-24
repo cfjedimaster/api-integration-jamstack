@@ -4,7 +4,7 @@ const app = new Vue({
 		films: null
 	},
 	async created() {
-		let resp = await fetch('/api/films/');
-		this.films = (await resp.json()).results;
+		let resp = await fetch('/api/films');
+		this.films = await resp.json();
 	}
 });

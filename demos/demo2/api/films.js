@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 		return {
 			title:f.title,
 			release_date:f.release_date,
-			directory:f.director
+			director:f.director
 		}
 	});
 
