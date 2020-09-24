@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 
+console.log('called!');
 fetch('https://swapi.dev/api/films')
 .then(res => res.json())
 .then(res => {
@@ -20,6 +21,6 @@ fetch('https://swapi.dev/api/films')
 	let contents = fs.readFileSync('./index.md','utf8');
 	contents = contents.replace('{{ filmData }}', generatedHTML);
 
-	fs.writeFileSync('./test3.final.html', contents);
+	fs.writeFileSync('./index.md', contents);
 	
 });
