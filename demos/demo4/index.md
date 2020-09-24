@@ -3,5 +3,5 @@
 <h2>Films</h2>
 
 <ul>
-{{ films }}
+{{ filmData }}
 </ul>
