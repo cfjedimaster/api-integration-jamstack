@@ -5,6 +5,7 @@ console.log('called!');
 fetch('https://swapi.dev/api/films')
 .then(res => res.json())
 .then(res => {
+	console.log('res', res);
 	let films = res.results.map(f => {
 		return {
 			title:f.title,
