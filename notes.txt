@@ -39,9 +39,9 @@ Option Three - Using the Build Process
 
 Option Four - generating an API
 
-Extra Credit - mixing it up (blog post on Fauna)
 
 Things to add at end - blog post (Read the book!)
+
 
 Photo Credits:
 

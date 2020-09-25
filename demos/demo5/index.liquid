@@ -1,0 +1,15 @@
+---
+title: Star Wars films
+layout: main
+---
+
+<h2>Star Wars Films</h2>
+
+Welcome to my Star Wars fan page.
+
+<ul>
+{% for film in films %}
+<li >{{ film.title }}, released in {{ film.release_date }}</li>
+{% endfor %}
+</ul>
+

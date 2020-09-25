@@ -32,15 +32,31 @@
 				</section>	
 
 				<section>
-				<h2>Gameplan</h2>
+				<h2>Housekeeping</h2>
+				</section>				
+
+				<section>
+				<h2>Tools and Links</h2>
+				<ul>
+				<li class="fragment">Vue.js</li>
+				<li class="fragment">Eleventy</li>
+				<li class="fragment">Netlify</li>
+				<li class="fragment">Code: <a href="https://github.com/cfjedimaster/api-integration-jamstack" target="_new">github.com/cfjedimaster/api-integration-jamstack</a></li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>What's all this?</h2>
 				<ul>
 				<li class="fragment">Remember JAMStack?</li>
 				<li class="fragment">Remember Static Site Generators?</li>
 				<li class="fragment">The A is for API</li>
-				<li class="fragment">Other services enhance my site</li>
+				<li class="fragment">Other services that enable/enhance my site</li>
+				<li class="fragment">Error mitigitation</li>
 				</ul>
 				<aside class="notes">
 				What we call jamstack now has evolved over the years from capital J-A-MStack and before that, static sites.
+				enable - it may be required - enhance - it may be nice to have
 				</aside>
 				</section>				
 
@@ -117,9 +133,73 @@ to tell it to copy the JS file, and that Eleventy uses Liquid in Markdown, which
 				<h2>API Proxies - Cons</h2>
 				<ul>
 				<li class="fragment">You have to write code (maybe)</li>
+				<li class="fragment">You may need yet another service</li>
 				</ul>
 				</section>
 
+				<section>
+				<h2>APIs in the Build Process</h2>
+				</section>				
+
+				<section>
+				<h2>Using the Build Process</h2>
+				<ul>
+				<li class="fragment">What happens when your site is generated</li>
+				<li class="fragment">A URL trigger/A GitHub commit/etc</li>
+				<li class="fragment">Well suited for dynamic data not changing "often"</li>
+				<li class="fragment">Options depend on platform and static site generator</li>
+				</ul>
+				<aside class="notes">
+				"often" will vary site to site. Product availability may update every day.
+				</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<aside class="notes">
+					demo4, show build script 
+					demo5, show Eleventy version
+					</aside>
+				</section>
+
+				<section>
+				<h1>Demo (2)</h1>
+				<p>
+				<a href="https://faunadbv2.vercel.app/" target="_new">Live demo</a><br/>
+				<a href="https://github.com/cfjedimaster/eleventy-demos/tree/master/fauna_test/v2" target="_new">Source</a><br/>
+				<a href="https://www.raymondcamden.com/2020/09/15/hooking-up-faunadb-to-eleventy" target="_new">Blog</a><br/>
+				</p>
+				<aside class="notes">
+				</aside>
+				</section>
+
+				<section>
+				<h2>Generating an "API"</h2>
+				</section>				
+
+				<section>
+				<h2>Genrating an "API"</h2>
+				<ul>
+				<li class="fragment">A serverless endpoint can do anything</li>
+				<li class="fragment">Generating computer-readable output</li>
+				<li class="fragment">JSON, XML, HTML, plain text</li>
+				<li class="fragment">A read-only API</li>
+				</ul>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<aside class="notes">
+					demo6
+					</aside>
+				</section>
+
+				<section>
+				<h2>Resources</h2>
+				<ul>
+				<li class="fragment"><a href="https://www.raymondcamden.com/2019/07/25/multiple-ways-of-api-integration-in-your-jamstack" target="_new">Blog Post</a></li>
+				</ul>
+				</section>
 			</div>
 		</div>
 
