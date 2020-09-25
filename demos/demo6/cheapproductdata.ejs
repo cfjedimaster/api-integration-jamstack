@@ -1,0 +1,8 @@
+---
+permalink: /cheapproducts.json
+---
+<% 
+let cheapProducts = products.filter(p => {
+	return p.cost < 250;
+});
+%><%- JSON.stringify(cheapProducts) %>

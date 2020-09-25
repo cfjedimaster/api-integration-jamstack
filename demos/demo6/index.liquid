@@ -1,0 +1,15 @@
+---
+title: Random Company Home page
+layout: main
+---
+
+<p>
+Hello from some random company.
+</p>
+
+
+<ul>
+{% for product in products %}
+	<li><a href="/product/{{product.name | slug}}">{{product.name}}</a></li>
+{% endfor %}
+</ul>

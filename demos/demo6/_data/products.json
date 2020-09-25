@@ -1,0 +1,22 @@
+[
+	{
+		"name":"TIE Fighter",
+		"cost":99,
+		"description":"A pretty weak fighter."
+	},
+	{
+		"name":"X-Wing",
+		"cost":300,
+		"description":"The backbone of the Rebellion."
+	},
+	{
+		"name":"A-Wing",
+		"cost":400,
+		"description":"Incredibly fast fighter."
+	},
+	{
+		"name":"TIE Interceptor",
+		"cost":200,
+		"description":"Slightly nicer looking TIE."
+	}
+]

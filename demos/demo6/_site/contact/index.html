@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Contact Me</title>
+	<style>
+	.container {
+		margin-top:70px;
+	}
+	</style>
+
+  </head>
+  <body>
+
+	<main role="main" class="container">
+	<h2>Contact Us!</h2>
+<form id="contactForm">
+<p>
+<label for="yourname">Your Name:</label><br/>
+<input id="yourname" v-model="name">
+</p>
+<p>
+<label for="youremail">Your Email:</label><br/>
+<input id="youremail" type="email" v-model="email">
+</p>
+<p>
+<label for="yourcomments">Your Comments:</label><br/>
+<textarea id="yourcomments" v-model="comments"></textarea>
+</p>
+<p>
+<button @click.prevent="send">Send</button>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+const app = new Vue({
+	el:'#contactForm',
+	data: {
+		name:'',
+		email:'',
+		comments:''
+	},
+	methods:{
+		async send() {
+			console.log('send');
+			let data = new FormData();
+			data.append('name', this.name);
+			data.append('email', this.email);
+			data.append('comments', this.comments);
+			let resp = await fetch('https://formspree.io/mknpnkdg', {
+				method:'POST', 
+				body:data,
+				headers: {
+    				'Accept': 'application/json'
+			  	}
+			});
+			let respData = await resp.json();
+			if(respData.ok) {
+				alert("Your awesome form was submitted!");
+				this.comments = '';
+			}
+		}
+	}
+});
+</script>
+	</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
